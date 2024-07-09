@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 
 const fileSchema = new mongoose.Schema({
-  Name: {
+  name: {
     type: String,
     trim: true,
     require: true,
   },
-  Email: {
+  email: {
     type: String,
     trim: true,
   },

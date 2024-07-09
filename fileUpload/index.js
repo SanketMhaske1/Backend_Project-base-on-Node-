@@ -9,7 +9,12 @@ const port = process.env.PORT || 4000;
 connect();
 cloudinaryConnect();
 app.use(express.json());
-app.use(fileupload());
+app.use(
+  fileupload({
+    useTempFiles: true,
+    tempFileDir: "/tmp/",
+  })
+);
 
 app.get("/", (req, res) => {
   res.send("welcome");
